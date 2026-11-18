@@ -1,0 +1,566 @@
+{
+  "kategori": [
+    {
+      "id": "carwash",
+      "kendaraan": "mobil",
+      "nama": "Car Wash",
+      "ringkas": "Cuci mobil, termasuk exterior cleaning",
+      "inklusi": "Sudah termasuk exterior cleaning.",
+      "aktif": true
+    },
+    {
+      "id": "antijamur",
+      "kendaraan": "mobil",
+      "nama": "Wash Anti Jamur",
+      "ringkas": "Removing water spot",
+      "inklusi": "Wash anti jamur, removing water spot.",
+      "aktif": true
+    },
+    {
+      "id": "interior",
+      "kendaraan": "mobil",
+      "nama": "Salon Interior",
+      "ringkas": "Salon interior dan deep interior cleaning",
+      "inklusi": "Salon Interior berlaku untuk semua ukuran mobil. Rincian Deep Interior Cleaning tercantum pada paketnya.",
+      "aktif": true
+    },
+    {
+      "id": "salon",
+      "kendaraan": "mobil",
+      "nama": "Salon Exterior",
+      "ringkas": "Perawatan eksterior, termasuk mobil Luxury",
+      "inklusi": "Tersedia juga paket Polish & Wax saja dan paket detailing lainnya. Silakan tanyakan ke admin.",
+      "aktif": true
+    },
+    {
+      "id": "detailing",
+      "kendaraan": "mobil",
+      "nama": "Detailing & Nano Coating",
+      "ringkas": "3 layer nano coating ceramic H9",
+      "inklusi": "Detailing dengan 3 layer nano coating ceramic H9.",
+      "aktif": true
+    },
+    {
+      "id": "full",
+      "kendaraan": "mobil",
+      "nama": "Full Auto Detailing",
+      "ringkas": "Exterior, interior, engine + 5 layers nano ceramic coating",
+      "inklusi": "Full auto detailing (exterior, interior & engine) polish, 5 layers Nano Ceramic Coating, glass coating & interior coating.",
+      "aktif": true
+    },
+    {
+      "id": "ppf",
+      "kendaraan": "mobil",
+      "nama": "PPF Mobil",
+      "ringkas": "Paint Protection Film, garansi 5 tahun",
+      "inklusi": "Sudah termasuk coating kaca, coating lampu, coating velg, interior cleaning, engine cleaning, 3-4 step polish. Garansi 5 tahun, self healing, hydrophobic.",
+      "aktif": true
+    },
+    {
+      "id": "motor",
+      "kendaraan": "motor",
+      "nama": "Motor (Bikes)",
+      "ringkas": "Detailing & polish, nano ceramic coating H9, PPF",
+      "inklusi": "Layanan untuk motor ukuran Medium Bike dan Big Bike.",
+      "aktif": true
+    }
+  ],
+  "paket": [
+    {
+      "id": "carwash-small-",
+      "kategori": "carwash",
+      "ukuran": "Small",
+      "label": "",
+      "rincian": [],
+      "harga": 150000,
+      "tipe": "jam",
+      "durMin": 60,
+      "durMax": 90,
+      "aktif": true
+    },
+    {
+      "id": "carwash-medium-",
+      "kategori": "carwash",
+      "ukuran": "Medium",
+      "label": "",
+      "rincian": [],
+      "harga": 200000,
+      "tipe": "jam",
+      "durMin": 60,
+      "durMax": 90,
+      "aktif": true
+    },
+    {
+      "id": "carwash-large-",
+      "kategori": "carwash",
+      "ukuran": "Large",
+      "label": "",
+      "rincian": [],
+      "harga": 250000,
+      "tipe": "jam",
+      "durMin": 60,
+      "durMax": 90,
+      "aktif": true
+    },
+    {
+      "id": "antijamur-small-",
+      "kategori": "antijamur",
+      "ukuran": "Small",
+      "label": "",
+      "rincian": [],
+      "harga": 200000,
+      "tipe": "jam",
+      "durMin": 60,
+      "durMax": 90,
+      "aktif": true
+    },
+    {
+      "id": "antijamur-medium-",
+      "kategori": "antijamur",
+      "ukuran": "Medium",
+      "label": "",
+      "rincian": [],
+      "harga": 300000,
+      "tipe": "jam",
+      "durMin": 60,
+      "durMax": 90,
+      "aktif": true
+    },
+    {
+      "id": "antijamur-large-",
+      "kategori": "antijamur",
+      "ukuran": "Large",
+      "label": "",
+      "rincian": [],
+      "harga": 350000,
+      "tipe": "jam",
+      "durMin": 60,
+      "durMax": 90,
+      "aktif": true
+    },
+    {
+      "id": "antijamur-luxury-",
+      "kategori": "antijamur",
+      "ukuran": "Luxury",
+      "label": "",
+      "rincian": [],
+      "harga": 400000,
+      "tipe": "jam",
+      "durMin": 60,
+      "durMax": 90,
+      "aktif": true
+    },
+    {
+      "id": "interior-all-size-salon-interior",
+      "kategori": "interior",
+      "ukuran": "All Size",
+      "label": "Salon Interior",
+      "rincian": [],
+      "harga": 1500000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "interior-all-size-deep-interior-cleaning",
+      "kategori": "interior",
+      "ukuran": "All Size",
+      "label": "Deep Interior Cleaning",
+      "rincian": [
+        "Dashboard Cleaning",
+        "Door Trim Cleaning",
+        "Dry Vacuum Interior",
+        "Wet Vacuum Interior",
+        "Floor Cleaning",
+        "Chassis Cleaning",
+        "Fogging Interior",
+        "Bersihkan Area Cabin",
+        "Masuk Minuman",
+        "Masuk Makanan",
+        "Masuk Binatang Kecoa",
+        "Masuk Semut",
+        "Masuk Binatang Tikus",
+        "Lepas Jok dan Lepas Karpet"
+      ],
+      "harga": 3500000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "salon-small-",
+      "kategori": "salon",
+      "ukuran": "Small",
+      "label": "",
+      "rincian": [],
+      "harga": 1150000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "salon-medium-",
+      "kategori": "salon",
+      "ukuran": "Medium",
+      "label": "",
+      "rincian": [],
+      "harga": 1450000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "salon-large-",
+      "kategori": "salon",
+      "ukuran": "Large",
+      "label": "",
+      "rincian": [],
+      "harga": 1650000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "salon-luxury-",
+      "kategori": "salon",
+      "ukuran": "Luxury",
+      "label": "",
+      "rincian": [],
+      "harga": 1850000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "detailing-small-",
+      "kategori": "detailing",
+      "ukuran": "Small",
+      "label": "",
+      "rincian": [],
+      "harga": 3500000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "detailing-medium-",
+      "kategori": "detailing",
+      "ukuran": "Medium",
+      "label": "",
+      "rincian": [],
+      "harga": 4500000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "detailing-large-",
+      "kategori": "detailing",
+      "ukuran": "Large",
+      "label": "",
+      "rincian": [],
+      "harga": 5000000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "full-small-",
+      "kategori": "full",
+      "ukuran": "Small",
+      "label": "",
+      "rincian": [],
+      "harga": 6700000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "full-medium-",
+      "kategori": "full",
+      "ukuran": "Medium",
+      "label": "",
+      "rincian": [],
+      "harga": 8850000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "full-large-",
+      "kategori": "full",
+      "ukuran": "Large",
+      "label": "",
+      "rincian": [],
+      "harga": 10700000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "full-luxury-",
+      "kategori": "full",
+      "ukuran": "Luxury",
+      "label": "",
+      "rincian": [],
+      "harga": 12700000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "ppf-small-brand-sun-vision-usa",
+      "kategori": "ppf",
+      "ukuran": "Small",
+      "label": "Brand Sun Vision USA",
+      "rincian": [],
+      "harga": 22000000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "ppf-medium-brand-sun-vision-usa",
+      "kategori": "ppf",
+      "ukuran": "Medium",
+      "label": "Brand Sun Vision USA",
+      "rincian": [],
+      "harga": 24000000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "ppf-large-brand-sun-vision-usa",
+      "kategori": "ppf",
+      "ukuran": "Large",
+      "label": "Brand Sun Vision USA",
+      "rincian": [],
+      "harga": 28000000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "ppf-small-brand-llumar",
+      "kategori": "ppf",
+      "ukuran": "Small",
+      "label": "Brand Llumar",
+      "rincian": [],
+      "harga": 24000000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "ppf-medium-brand-llumar",
+      "kategori": "ppf",
+      "ukuran": "Medium",
+      "label": "Brand Llumar",
+      "rincian": [],
+      "harga": 28000000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "ppf-large-brand-llumar",
+      "kategori": "ppf",
+      "ukuran": "Large",
+      "label": "Brand Llumar",
+      "rincian": [],
+      "harga": 32000000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "motor-medium-bike-detailing-polish",
+      "kategori": "motor",
+      "ukuran": "Medium Bike",
+      "label": "Detailing & Polish",
+      "rincian": [
+        "Wash Detail",
+        "Exterior & Engine Detailing",
+        "Waterspot Remover",
+        "Chrome Metal Detailing",
+        "Multi Steps Paint Correction",
+        "Spray Wax"
+      ],
+      "harga": 850000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "motor-big-bike-detailing-polish",
+      "kategori": "motor",
+      "ukuran": "Big Bike",
+      "label": "Detailing & Polish",
+      "rincian": [
+        "Wash Detail",
+        "Exterior & Engine Detailing",
+        "Waterspot Remover",
+        "Chrome Metal Detailing",
+        "Multi Steps Paint Correction",
+        "Spray Wax"
+      ],
+      "harga": 1150000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "motor-medium-bike-double-layer",
+      "kategori": "motor",
+      "ukuran": "Medium Bike",
+      "label": "Double Layer",
+      "rincian": [
+        "Wash Detail",
+        "Exterior & Engine Detailing",
+        "Waterspot Remover",
+        "Chrome Metal Detailing",
+        "Multi Steps Paint Correction",
+        "Spray Wax",
+        "2 Layer Nano Ceramic Coating H9"
+      ],
+      "harga": 1000000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "motor-big-bike-double-layer",
+      "kategori": "motor",
+      "ukuran": "Big Bike",
+      "label": "Double Layer",
+      "rincian": [
+        "Wash Detail",
+        "Exterior & Engine Detailing",
+        "Waterspot Remover",
+        "Chrome Metal Detailing",
+        "Multi Steps Paint Correction",
+        "Spray Wax",
+        "2 Layer Nano Ceramic Coating H9"
+      ],
+      "harga": 1300000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "motor-medium-bike-premium-layer",
+      "kategori": "motor",
+      "ukuran": "Medium Bike",
+      "label": "Premium Layer",
+      "rincian": [
+        "Wash Detail",
+        "Exterior & Engine Detailing",
+        "Waterspot Remover",
+        "Chrome Metal Detailing",
+        "Multi Steps Paint Correction",
+        "Spray Wax",
+        "3 Layer Nano Ceramic Coating H9"
+      ],
+      "harga": 1500000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "motor-big-bike-premium-layer",
+      "kategori": "motor",
+      "ukuran": "Big Bike",
+      "label": "Premium Layer",
+      "rincian": [
+        "Wash Detail",
+        "Exterior & Engine Detailing",
+        "Waterspot Remover",
+        "Chrome Metal Detailing",
+        "Multi Steps Paint Correction",
+        "Spray Wax",
+        "3 Layer Nano Ceramic Coating H9"
+      ],
+      "harga": 1800000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 1,
+      "aktif": true
+    },
+    {
+      "id": "motor-medium-bike-ppf",
+      "kategori": "motor",
+      "ukuran": "Medium Bike",
+      "label": "PPF",
+      "rincian": [
+        "Paint Protection Film"
+      ],
+      "harga": 4000000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    },
+    {
+      "id": "motor-big-bike-ppf",
+      "kategori": "motor",
+      "ukuran": "Big Bike",
+      "label": "PPF",
+      "rincian": [
+        "Paint Protection Film"
+      ],
+      "harga": 4300000,
+      "tipe": "hari",
+      "durMin": 1,
+      "durMax": 3,
+      "aktif": true
+    }
+  ],
+  "promo": [
+    {
+      "id": "promo-kemerdekaan",
+      "nama": "Promo Kemerdekaan",
+      "persen": 17,
+      "kategori": "ppf",
+      "mulai": "",
+      "selesai": "",
+      "aktif": false
+    }
+  ],
+  "pengaturan": {
+    "jamBuka": "09:00",
+    "jamTerakhir": "19:00",
+    "interval": 30,
+    "bayCuci": 2,
+    "kapasitasInap": 3,
+    "wa": "6281219901971",
+    "alamat": "Jl. Hang Tuah I No.4, Gunung, Kebayoran Baru, Jakarta Selatan",
+    "mapsUrl": "https://maps.app.goo.gl/GyxU2F6tTVNAoHm89",
+    "lat": -6.2335524,
+    "lng": 106.7971049
+  }
+}

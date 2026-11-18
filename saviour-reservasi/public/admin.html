@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Admin - Saviour Auto Detailing</title>
+  <meta name="robots" content="noindex">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a href="index.html"><img class="logo" src="logo.png" alt="Saviour Auto Detailing"></a>
+  <nav><a href="index.html">Lihat web</a><a href="#" id="keluar" hidden>Keluar</a></nav>
+</div></header>
+
+<div id="viewLogin" class="login">
+  <p class="eyebrow">Admin</p>
+  <h2>Masuk</h2>
+  <div><label for="u">Username</label><input id="u" autocomplete="username" autocapitalize="none"></div>
+  <div><label for="p">Password</label><input id="p" type="password" autocomplete="current-password"></div>
+  <button class="btn" id="btnLogin">Masuk</button>
+  <div id="errLogin" role="alert"></div>
+</div>
+
+<main id="viewData" class="wrap admin" hidden>
+  <p class="eyebrow">Admin</p>
+  <h2>Dashboard</h2>
+  <div class="tabs tabs-admin" id="tabsAdmin" role="tablist">
+    <button role="tab" aria-selected="true" data-t="reservasi">Reservasi</button>
+    <button role="tab" aria-selected="false" data-t="jadwal">Jadwal</button>
+    <button role="tab" aria-selected="false" data-t="layanan">Layanan &amp; Harga</button>
+    <button role="tab" aria-selected="false" data-t="promo">Promo</button>
+    <button role="tab" aria-selected="false" data-t="pengaturan">Pengaturan</button>
+  </div>
+
+  <div id="t-reservasi">
+    <div class="stat-grid" id="stat"></div>
+    <div class="alat">
+      <input id="cari" placeholder="Cari nama, kode, plat, atau mobil" aria-label="Cari reservasi">
+      <select id="filter" aria-label="Filter status"><option value="">Semua status</option></select>
+      <button class="btn ghost" id="csv">Ekspor CSV</button>
+    </div>
+    <table class="tbl" id="tblRes"><thead><tr><th>Kode</th><th>Jadwal</th><th>Pelanggan</th><th>Kendaraan</th><th>Layanan</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="isi"></tbody></table>
+  </div>
+  <div id="t-jadwal" hidden></div>
+  <div id="t-layanan" hidden></div>
+  <div id="t-promo" hidden></div>
+  <div id="t-pengaturan" hidden></div>
+</main>
+
+<div class="savebar" id="savebar" hidden><span>Ada perubahan yang belum disimpan.</span><button class="btn" id="btnSimpan">Simpan perubahan</button></div>
+<div class="toast-area" id="toasts"></div>
+<script src="admin.js"></script>
+</body>
+</html>

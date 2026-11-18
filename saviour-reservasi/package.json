@@ -1,0 +1,8 @@
+{
+  "name": "saviour-reservasi",
+  "version": "1.0.0",
+  "description": "Sistem Informasi Reservasi Servis Kendaraan Berbasis Web - Saviour Auto Detailing",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^4.19.2" }
+}
