@@ -53,10 +53,10 @@ function renderPriceList() {
     const ps = k.paket.filter((p) => p.ukuran === u);
     ps.forEach((p, j) => {
       const rinci = p.rincian && p.rincian.length ? `<small>${p.rincian.map(esc).join(' · ')}</small>` : '';
-      baris += `<tr class="${j ? '' : 'awal'}">${j ? '' : `<td class="ukuran" rowspan="${ps.length}">${esc(u)}</td>`}<td>${esc(p.label || k.nama)}<small class="est">Estimasi ${esc(p.durasi)}</small>${rinci}</td><td class="harga">${hargaHtml(p)}${p.promoNama ? `<small class="promo">${esc(p.promoNama)}</small>` : ''}<button type="button" class="btn ghost kecil pilih" data-pesan="${esc(p.id)}">Pesan</button></td></tr>`;
+      baris += `<tr class="${j ? '' : 'awal'}">${j ? '' : `<td class="ukuran" rowspan="${ps.length}">${esc(u)}</td>`}<td>${esc(p.label || k.nama)}<small class="est">Estimasi ${esc(p.durasi)}</small>${rinci}</td><td class="harga">${hargaHtml(p)}${p.promoNama ? `<small class="promo">${esc(p.promoNama)}</small>` : ''}</td><td class="aksi-pl"><button type="button" class="btn ghost kecil pilih" data-pesan="${esc(p.id)}">Pesan</button></td></tr>`;
     });
   }
-  $('#panelHarga').innerHTML = `<div class="tbl-scroll"><table class="pl"><thead><tr><th>Model</th><th>Paket</th><th class="harga">Harga</th></tr></thead><tbody>${baris}</tbody></table></div>
+  $('#panelHarga').innerHTML = `<div class="tbl-scroll"><table class="pl"><thead><tr><th>Model</th><th>Paket</th><th class="harga">Harga</th><th aria-label="Aksi"></th></tr></thead><tbody>${baris}</tbody></table></div>
     <p class="inklusi">${esc(k.inklusi)}</p><p class="catatan">Home service tersedia. Biaya dan ketersediaan dikonfirmasi oleh admin.</p>`;
 }
 $('#kendHarga').addEventListener('click', (e) => { if (e.target.dataset.kend) { plKend = e.target.dataset.kend; renderPriceList(); } });

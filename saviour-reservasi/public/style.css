@@ -254,7 +254,8 @@ details.faq summary::after{content:"+";color:var(--emas);font-size:1.4rem;line-h
 details.faq[open] summary::after{content:"−"}
 details.faq p{margin:0 0 18px;color:var(--redup);max-width:70ch}
 /* tombol pesan di price list */
-.pl .pilih{margin:0 0 0 14px;vertical-align:middle}
+.pl .aksi-pl{width:1%;white-space:nowrap;text-align:right;vertical-align:middle;padding-left:24px}
+.pl .pilih{margin:0}
 /* footer kontak */
 .kontak{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:8px}
 .kontak a{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
@@ -279,6 +280,6 @@ details.faq p{margin:0 0 18px;color:var(--redup);max-width:70ch}
   .galeri{grid-template-columns:repeat(2,1fr);gap:12px}
   .agenda-item{grid-template-columns:52px 1fr}
   .agenda-item .badge{grid-column:2;justify-self:start}
-  .pl .pilih{display:flex;width:100%;margin:8px 0 0}
+  .pl .aksi-pl{padding-left:14px}
 }
 @media(max-width:480px){.fitur-grid,.alur{grid-template-columns:1fr}}
