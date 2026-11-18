@@ -213,8 +213,17 @@ $('#panelHarga').addEventListener('click', (e) => {
   $('#reservasi').scrollIntoView({ behavior: 'smooth' });
 });
 
-/* ---------- animasi muncul saat di-scroll ---------- */
+/* ---------- animasi muncul saat di-scroll & sorot navbar aktif ---------- */
 const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((x) => { if (x.isIntersecting) { x.target.classList.add('tampil'); io.unobserve(x.target); } }), { threshold: 0.05 }) : null;
 document.querySelectorAll('.reveal').forEach((el) => (io ? io.observe(el) : el.classList.add('tampil')));
+
+const navLinks = [...document.querySelectorAll('header.nav nav a[href^="#"]')];
+if ('IntersectionObserver' in window && navLinks.length) {
+  const navIo = new IntersectionObserver((es) => {
+    const masuk = es.find((x) => x.isIntersecting);
+    if (masuk) navLinks.forEach((a) => a.classList.toggle('aktif', a.getAttribute('href') === '#' + masuk.target.id));
+  }, { rootMargin: '-35% 0px -55% 0px' });
+  document.querySelectorAll('main section[id]').forEach((s) => navIo.observe(s));
+}
 
 awal();
