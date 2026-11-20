@@ -53,10 +53,10 @@ function renderPriceList() {
     const ps = k.paket.filter((p) => p.ukuran === u);
     ps.forEach((p, j) => {
       const rinci = p.rincian && p.rincian.length ? `<small>${p.rincian.map(esc).join(' · ')}</small>` : '';
-      baris += `<tr class="${j ? '' : 'awal'}">${j ? '' : `<td class="ukuran" rowspan="${ps.length}">${esc(u)}</td>`}<td>${esc(p.label || k.nama)}<small class="est">Estimasi ${esc(p.durasi)}</small>${rinci}</td><td class="harga"><div class="harga-aksi"><span class="harga-nilai">${hargaHtml(p)}${p.promoNama ? `<small class="promo">${esc(p.promoNama)}</small>` : ''}</span><button type="button" class="btn ghost kecil pilih" data-pesan="${esc(p.id)}">Pesan</button></div></td></tr>`;
+      baris += `<tr class="${j ? '' : 'awal'}">${j ? '' : `<td class="ukuran" rowspan="${ps.length}">${esc(u)}</td>`}<td>${esc(p.label || k.nama)}<small class="est">Estimasi ${esc(p.durasi)}</small>${rinci}</td><td class="harga"><span class="harga-nilai">${hargaHtml(p)}${p.promoNama ? `<small class="promo">${esc(p.promoNama)}</small>` : ''}</span></td><td class="aksi-pl"><button type="button" class="btn ghost kecil pilih" data-pesan="${esc(p.id)}">Pesan</button></td></tr>`;
     });
   }
-  $('#panelHarga').innerHTML = `<div class="tbl-scroll"><table class="pl"><thead><tr><th>Model</th><th>Paket</th><th class="harga">Harga</th></tr></thead><tbody>${baris}</tbody></table></div>
+  $('#panelHarga').innerHTML = `<div class="tbl-scroll"><table class="pl"><thead><tr><th>Model</th><th>Paket</th><th class="harga">Harga</th><th aria-label="Aksi"></th></tr></thead><tbody>${baris}</tbody></table></div>
     <p class="inklusi">${esc(k.inklusi)}</p><p class="catatan">Home service tersedia. Biaya dan ketersediaan dikonfirmasi oleh admin.</p>`;
 }
 $('#kendHarga').addEventListener('click', (e) => { if (e.target.dataset.kend) { plKend = e.target.dataset.kend; renderPriceList(); } });
@@ -213,7 +213,7 @@ $('#panelHarga').addEventListener('click', (e) => {
   $('#reservasi').scrollIntoView({ behavior: 'smooth' });
 });
 
-/* ---------- animasi muncul saat di-scroll ---------- */
+/* ---------- animasi muncul saat di-scroll & sorot navbar aktif ---------- */
 const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((x) => { if (x.isIntersecting) { x.target.classList.add('tampil'); io.unobserve(x.target); } }), { threshold: 0.05 }) : null;
 document.querySelectorAll('.reveal').forEach((el) => (io ? io.observe(el) : el.classList.add('tampil')));
 

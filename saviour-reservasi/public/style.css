@@ -10,10 +10,10 @@ img.logo{mix-blend-mode:lighten;display:block}
 header.nav{position:sticky;top:0;z-index:5;background:rgba(10,10,11,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--garis)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px}
 .nav img.logo{height:34px;width:auto}
-.nav nav{display:flex;gap:26px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
-.nav nav a{text-decoration:none;color:var(--redup)}
-.nav nav a:hover{color:var(--emas)}
-.nav nav a[aria-current=location]{color:var(--emas2);box-shadow:0 1px 0 var(--emas)}
+.nav nav{display:flex;gap:20px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+.nav nav a{text-decoration:none;color:var(--redup);white-space:nowrap}
+.nav nav a:hover,.nav nav a[aria-current=location]{color:var(--emas2)}
+.nav nav a[aria-current=location]{box-shadow:0 1px 0 var(--emas)}
 /* hero */
 .hero{padding:104px 0 88px;text-align:center}
 .hero img.logo{width:min(480px,86%);margin:0 auto 34px}
@@ -23,6 +23,10 @@ header.nav{position:sticky;top:0;z-index:5;background:rgba(10,10,11,.88);backdro
 .hero p.isi{color:var(--redup);max-width:58ch;margin:0 auto 34px}
 .orn{width:64px;height:1px;background:var(--emas);margin:22px auto}
 .hero .aksi{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.rating-google{display:flex;align-items:center;justify-content:center;gap:8px 12px;flex-wrap:wrap;margin:24px auto 0;color:var(--redup);font-size:.82rem}
+.rating-google-bintang{color:var(--emas2);letter-spacing:.12em}
+.rating-google strong{color:var(--teks);font-size:.95rem}
+.rating-google a{color:var(--emas2);text-underline-offset:3px}
 .btn{display:inline-block;background:var(--emas);color:#14110a;font:600 .76rem Montserrat,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:14px 30px;border:1px solid var(--emas);border-radius:2px;cursor:pointer;text-decoration:none}
 .btn:hover{background:var(--emas2);border-color:var(--emas2)}
 .btn.ghost{background:transparent;color:var(--emas)}
@@ -31,7 +35,7 @@ header.nav{position:sticky;top:0;z-index:5;background:rgba(10,10,11,.88);backdro
 .btn.wa:hover{background:#187a42}
 .btn.kecil{padding:8px 14px;font-size:.68rem}
 /* section */
-section{padding:92px 0;border-top:1px solid var(--garis)}
+section{padding:92px 0;border-top:1px solid var(--garis);scroll-margin-top:56px}
 h2{font-size:clamp(1.6rem,3vw,2.3rem);margin:0 0 6px}
 .sub{color:var(--redup);margin:0 0 32px}
 /* price list */
@@ -45,9 +49,9 @@ h2{font-size:clamp(1.6rem,3vw,2.3rem);margin:0 0 6px}
 .pl td{padding:16px 0;border-bottom:1px solid var(--garis);vertical-align:top}
 .pl tr.awal td{border-top:1px solid var(--garis2)}
 .pl .ukuran{font-family:var(--serif);font-size:1.35rem;width:26%;color:var(--emas2)}
-.pl .harga{text-align:right;white-space:normal;font-weight:600}
-.pl .harga-aksi{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.pl .harga{text-align:right;white-space:nowrap;font-weight:600}
 .pl .harga-nilai{white-space:nowrap}
+.pl .aksi-pl{padding-left:14px;white-space:nowrap}
 .pl .pilih{width:auto;margin:0}
 .pl small{display:block;margin-top:4px;color:var(--redup);font-size:.76rem;line-height:1.55;white-space:normal}
 .pl s{color:#777;margin-right:8px;font-weight:400}
@@ -57,6 +61,7 @@ h2{font-size:clamp(1.6rem,3vw,2.3rem);margin:0 0 6px}
 .galeri{columns:3 260px;column-gap:18px}
 .galeri figure{margin:0 0 18px;break-inside:avoid;border:1px solid var(--garis);background:var(--kartu)}
 .galeri img{display:block;width:100%;cursor:zoom-in;transition:opacity .2s}
+.galeri img.foto-portofolio{aspect-ratio:auto;object-fit:contain}
 .galeri img:hover{opacity:.88}
 .galeri figcaption{padding:10px 14px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--redup)}
 dialog.lightbox{background:transparent;border:0;padding:0;max-width:94vw;max-height:94vh;text-align:center}
@@ -258,7 +263,8 @@ details.faq summary::after{content:"+";color:var(--emas);font-size:1.4rem;line-h
 details.faq[open] summary::after{content:"−"}
 details.faq p{margin:0 0 18px;color:var(--redup);max-width:70ch}
 /* tombol pesan di price list */
-.pl .pilih{margin-top:8px}
+.pl .aksi-pl{width:1%;white-space:nowrap;text-align:right;vertical-align:middle;padding-left:24px}
+.pl .pilih{margin:0}
 /* footer kontak */
 .kontak{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:8px}
 .kontak a{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
@@ -326,5 +332,6 @@ details.faq p{margin:0 0 18px;color:var(--redup);max-width:70ch}
   .agenda-item{grid-template-columns:52px 1fr}
   .agenda-item .badge{grid-column:2;justify-self:start}
   .pl .pilih{width:auto}
+  .pl .aksi-pl{padding-left:14px}
 }
 @media(max-width:480px){.fitur-grid,.alur{grid-template-columns:1fr}}
