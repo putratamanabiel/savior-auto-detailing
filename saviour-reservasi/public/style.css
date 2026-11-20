@@ -13,6 +13,7 @@ header.nav{position:sticky;top:0;z-index:5;background:rgba(10,10,11,.88);backdro
 .nav nav{display:flex;gap:26px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
 .nav nav a{text-decoration:none;color:var(--redup)}
 .nav nav a:hover{color:var(--emas)}
+.nav nav a[aria-current=location]{color:var(--emas2);box-shadow:0 1px 0 var(--emas)}
 /* hero */
 .hero{padding:104px 0 88px;text-align:center}
 .hero img.logo{width:min(480px,86%);margin:0 auto 34px}
@@ -44,7 +45,10 @@ h2{font-size:clamp(1.6rem,3vw,2.3rem);margin:0 0 6px}
 .pl td{padding:16px 0;border-bottom:1px solid var(--garis);vertical-align:top}
 .pl tr.awal td{border-top:1px solid var(--garis2)}
 .pl .ukuran{font-family:var(--serif);font-size:1.35rem;width:26%;color:var(--emas2)}
-.pl .harga{text-align:right;white-space:nowrap;font-weight:600}
+.pl .harga{text-align:right;white-space:normal;font-weight:600}
+.pl .harga-aksi{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.pl .harga-nilai{white-space:nowrap}
+.pl .pilih{width:auto;margin:0}
 .pl small{display:block;margin-top:4px;color:var(--redup);font-size:.76rem;line-height:1.55;white-space:normal}
 .pl s{color:#777;margin-right:8px;font-weight:400}
 .inklusi{border-left:2px solid var(--emas);padding:6px 0 6px 16px;margin:22px 0 0;color:var(--redup);font-size:.9rem}
@@ -274,11 +278,53 @@ details.faq p{margin:0 0 18px;color:var(--redup);max-width:70ch}
 .agenda-item{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;padding:12px 14px;border:1px solid var(--garis);background:var(--kartu);margin-bottom:8px}
 .agenda-item b{font-family:var(--serif);font-size:1.15rem;font-weight:500}
 .agenda-item small{display:block;color:var(--redup);font-size:.78rem}
+@media(max-width:640px){
+  html{scroll-padding-top:92px}
+  section[id]{scroll-margin-top:92px}
+  .wrap{padding-right:16px;padding-left:16px}
+  .nav .wrap{flex-wrap:wrap;gap:4px 12px}
+  .nav nav{flex:0 0 100%;width:100%;margin:2px 0 -8px;padding:0;align-items:center;gap:20px}
+  .nav nav a{min-height:44px;display:inline-flex;align-items:center}
+  .hero{padding:42px 0 40px}
+  .hero img.logo{width:min(360px,82%);margin-bottom:24px}
+  .hero .aksi{display:grid;grid-template-columns:1fr;gap:10px}
+  section{padding:48px 0}
+  .sub{margin-bottom:24px}
+  .layout{gap:16px}
+  .panel{padding:18px 14px}
+  .sticky{position:sticky;top:88px}
+  .stepper{gap:6px;margin-bottom:20px}
+  .stepper div{font-size:.64rem;letter-spacing:.08em}
+  .langkah{gap:14px}
+  .kat-grid{gap:8px}
+  .kat label,.paket label{padding:14px 12px}
+  .paket label{gap:10px}
+  .paket label em{font-size:.88rem}
+  .seg label{padding:12px 5px}
+  .nav-form{bottom:0;padding:10px 0 calc(10px + env(safe-area-inset-bottom))}
+  .nav-form .btn{padding-right:12px;padding-left:12px;font-size:.68rem;letter-spacing:.08em}
+  .lokasi-grid{gap:14px}
+  .peta,.peta iframe{min-height:220px}
+  .tabs-admin{top:88px}
+  details.ed>summary{padding:14px 12px;flex-wrap:wrap}
+  details.ed>summary small{margin-left:0}
+  .tbl tr{padding:8px 10px}
+  .tbl td{gap:10px;overflow-wrap:anywhere}
+  .tbl td::before{flex-basis:72px}
+  .tbl td select{max-width:60%;min-width:0}
+  .cek>*{flex:1 1 100%}
+  .cek input{min-width:0}
+  .timeline div{font-size:.62rem;letter-spacing:.02em}
+  .wa-float{right:12px;bottom:calc(16px + env(safe-area-inset-bottom));width:52px;height:52px;padding:0;justify-content:center}
+  .toast-area{left:12px;right:12px;bottom:calc(76px + env(safe-area-inset-bottom));transform:none}
+  .toast{font-size:.8rem;padding:10px 12px;overflow-wrap:anywhere}
+  footer .wrap{gap:18px}
+}
 @media(max-width:860px){
   .fitur-grid,.alur{grid-template-columns:repeat(2,1fr);gap:12px}
   .galeri{grid-template-columns:repeat(2,1fr);gap:12px}
   .agenda-item{grid-template-columns:52px 1fr}
   .agenda-item .badge{grid-column:2;justify-self:start}
-  .pl .pilih{width:100%}
+  .pl .pilih{width:auto}
 }
 @media(max-width:480px){.fitur-grid,.alur{grid-template-columns:1fr}}

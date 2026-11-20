@@ -53,7 +53,7 @@ function renderPriceList() {
     const ps = k.paket.filter((p) => p.ukuran === u);
     ps.forEach((p, j) => {
       const rinci = p.rincian && p.rincian.length ? `<small>${p.rincian.map(esc).join(' · ')}</small>` : '';
-      baris += `<tr class="${j ? '' : 'awal'}">${j ? '' : `<td class="ukuran" rowspan="${ps.length}">${esc(u)}</td>`}<td>${esc(p.label || k.nama)}<small class="est">Estimasi ${esc(p.durasi)}</small>${rinci}</td><td class="harga">${hargaHtml(p)}${p.promoNama ? `<small class="promo">${esc(p.promoNama)}</small>` : ''}<button type="button" class="btn ghost kecil pilih" data-pesan="${esc(p.id)}">Pesan</button></td></tr>`;
+      baris += `<tr class="${j ? '' : 'awal'}">${j ? '' : `<td class="ukuran" rowspan="${ps.length}">${esc(u)}</td>`}<td>${esc(p.label || k.nama)}<small class="est">Estimasi ${esc(p.durasi)}</small>${rinci}</td><td class="harga"><div class="harga-aksi"><span class="harga-nilai">${hargaHtml(p)}${p.promoNama ? `<small class="promo">${esc(p.promoNama)}</small>` : ''}</span><button type="button" class="btn ghost kecil pilih" data-pesan="${esc(p.id)}">Pesan</button></div></td></tr>`;
     });
   }
   $('#panelHarga').innerHTML = `<div class="tbl-scroll"><table class="pl"><thead><tr><th>Model</th><th>Paket</th><th class="harga">Harga</th></tr></thead><tbody>${baris}</tbody></table></div>
@@ -216,5 +216,32 @@ $('#panelHarga').addEventListener('click', (e) => {
 /* ---------- animasi muncul saat di-scroll ---------- */
 const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((x) => { if (x.isIntersecting) { x.target.classList.add('tampil'); io.unobserve(x.target); } }), { threshold: 0.05 }) : null;
 document.querySelectorAll('.reveal').forEach((el) => (io ? io.observe(el) : el.classList.add('tampil')));
+
+const navSections = [...document.querySelectorAll('.nav nav a[href^="#"]')]
+  .map((link) => ({ link, section: document.getElementById(link.hash.slice(1)) }))
+  .filter((item) => item.section);
+function perbaruiNavigasi() {
+  const batas = document.querySelector('header.nav').getBoundingClientRect().bottom + 8;
+  let aktif = null;
+  for (const item of navSections) {
+    if (item.section.getBoundingClientRect().top <= batas) aktif = item;
+    else break;
+  }
+  navSections.forEach(({ link }) => {
+    if (aktif && link === aktif.link) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+}
+let jadwalNavigasi = 0;
+function jadwalkanPembaruanNavigasi() {
+  if (jadwalNavigasi) return;
+  jadwalNavigasi = requestAnimationFrame(() => {
+    perbaruiNavigasi();
+    jadwalNavigasi = 0;
+  });
+}
+window.addEventListener('scroll', jadwalkanPembaruanNavigasi, { passive: true });
+window.addEventListener('resize', jadwalkanPembaruanNavigasi);
+perbaruiNavigasi();
 
 awal();
