@@ -60,7 +60,7 @@ h2{font-size:clamp(1.6rem,3vw,2.3rem);margin:0 0 6px}
 .galeri{columns:3 260px;column-gap:18px}
 .galeri figure{margin:0 0 18px;break-inside:avoid;border:1px solid var(--garis);background:var(--kartu)}
 .galeri img{display:block;width:100%;cursor:zoom-in;transition:opacity .2s}
-.galeri img.foto-portofolio{aspect-ratio:auto;object-fit:contain}
+.galeri img.foto-portofolio{aspect-ratio:3/4;object-fit:contain;object-position:center}
 .galeri img:hover{opacity:.88}
 .galeri figcaption{padding:10px 14px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--redup)}
 dialog.lightbox{background:transparent;border:0;padding:0;max-width:94vw;max-height:94vh;text-align:center}
@@ -252,7 +252,7 @@ label{font-size:.76rem}
 /* galeri rapi */
 .galeri{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;columns:auto}
 .galeri figure{margin:0;break-inside:auto}
-.galeri img{aspect-ratio:3/4;object-fit:cover;object-position:top;height:auto}
+.galeri img{aspect-ratio:3/4;object-fit:contain;object-position:center;height:auto;background:#0d0d0f}
 /* keunggulan */
 .fitur-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .fitur{padding:26px 22px;border:1px solid var(--garis);background:var(--kartu);transition:border-color .3s,transform .3s}
